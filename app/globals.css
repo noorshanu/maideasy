@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-primary: #4A2B4D;
+  --color-primary-light: #5A355D;
+  --color-primary-dark: #3A213D;
+  --color-background: #FCF9F9;
+  --color-accent: #F4E8E8;
+  --color-accent-dark: #E2CACA;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
