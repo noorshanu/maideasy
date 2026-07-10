@@ -86,13 +86,14 @@ export default function HeroSection() {
             </motion.div>
             
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-              <motion.button
+              <motion.a
+              href="/book-now"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary-light transition-colors shadow-md"
               >
                 Book a Household Assistant <FiArrowRight className="text-lg" />
-              </motion.button>
+              </motion.a>
               {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

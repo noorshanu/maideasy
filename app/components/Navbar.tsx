@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FiMenu, FiX, FiPhone } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -9,6 +10,8 @@ import Image from "next/image";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isBookNow = pathname === "/book-now";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "/" },
     { name: "About Us", href: "#" },
     { name: "Services", href: "#" },
     { name: "For Helpers", href: "#" },
@@ -31,23 +34,22 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
+        isScrolled || isBookNow ? "bg-white shadow-md py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0">
+          <div className="relative w-24 h-24 flex-shrink-0">
             <Image 
               src="/logo.png" 
               alt="MaidEazy Logo" 
               fill
-              className="object-contain"
+              priority
+              className="object-contain w-full h-full"
             />
           </div>
-          <span className="font-serif text-2xl md:text-3xl font-normal text-primary tracking-[0.2em]">
-            MAIDEAZY
-          </span>
+        
         </Link>
 
         {/* Desktop Navigation */}
@@ -72,13 +74,14 @@ export default function Navbar() {
             <FiPhone className="text-lg" />
             <span>+91 9061 222 123</span>
           </a>
-          <motion.button
+          <motion.a
+            href="/book-now"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-sm uppercase tracking-wider hover:bg-primary-light transition-colors shadow-sm"
           >
-            Book a Helper
-          </motion.button>
+            Book Assistant
+          </motion.a>
         </div>
 
         {/* Mobile Menu Toggle */}
