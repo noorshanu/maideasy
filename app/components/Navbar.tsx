@@ -120,9 +120,13 @@ export default function Navbar() {
                   <FiPhone />
                   <span>+91 9061 222 123</span>
                 </a>
-                <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold text-sm uppercase tracking-wider hover:bg-primary-light transition-colors w-full">
+                <Link
+                  href="/book-now"
+                  className="bg-primary text-white px-6 py-3 rounded-lg font-semibold text-sm uppercase tracking-wider hover:bg-primary-light transition-colors w-full text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Book a Helper
-                </button>
+                </Link>
               </div>
             </div>
           </motion.div>

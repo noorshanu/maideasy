@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiShield, FiArrowRight } from "react-icons/fi";
 
@@ -30,13 +31,12 @@ export default function CTASection() {
             </div>
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            href="/book-now"
             className="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all backdrop-blur-sm whitespace-nowrap relative z-10 w-full md:w-auto"
           >
             Book a Helper Now <FiArrowRight className="text-lg" />
-          </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

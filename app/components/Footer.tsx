@@ -44,10 +44,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Company</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="#" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="#about-us" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link href="#contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -55,12 +55,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="#" className="hover:text-white transition-colors">Maid Services</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Cook Services</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Babysitter</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Elder Care</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Patient Care</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Other Services</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Maid Services</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Cook Services</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Babysitter</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Elder Care</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Patient Care</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Other Services</Link></li>
             </ul>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
               <li><Link href="#" className="hover:text-white transition-colors">Register as Helper</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Benefits</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Training</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">FAQs</Link></li>
+              <li><Link href="#faq" className="hover:text-white transition-colors">FAQs</Link></li>
             </ul>
           </div>
 
