@@ -6,7 +6,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 export default function BookHero() {
   return (
-    <section className="relative pt-32 pb-12 overflow-hidden bg-background">
+    <section className="relative mt-[100px] md:mt-[120px] pt-12 pb-12 overflow-hidden bg-background">
       {/* Background Image on the right */}
       <div className="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-40 md:opacity-100 z-0">
         <Image
