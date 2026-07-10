@@ -46,16 +46,16 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-2"
         >
-          <div className="flex items-center justify-center gap-4 mb-4">
+          <div className="flex items-center justify-center gap-4 ">
             <div className="h-[1px] w-16 bg-primary/30"></div>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gray-900">
               Our Services
@@ -63,7 +63,7 @@ export default function ServicesSection() {
             <div className="h-[1px] w-16 bg-primary/30"></div>
           </div>
           <div className="flex justify-center">
-             <Image src="/logo.png" alt="Decorative" width={40} height={40} className="opacity-20" />
+             <Image src="/leafline.png" alt="Decorative" width={240} height={140} className="" />
           </div>
         </motion.div>
 
@@ -75,7 +75,8 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05  }}
+               
               className="bg-[#FCF9F9] rounded-xl p-6 flex flex-col items-center text-center border border-gray-100 shadow-sm hover:shadow-md transition-all cursor-pointer group"
             >
               <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary transition-colors duration-300">

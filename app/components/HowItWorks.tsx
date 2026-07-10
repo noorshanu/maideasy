@@ -33,21 +33,21 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 bg-[#FCF9F9]">
+    <section className="py-10 bg-[#FCF9F9]" id="how-it-works">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-2"
         >
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-[1px] w-16 bg-primary/30"></div>
+            <div className="h-px w-16 bg-primary/30"></div>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gray-900">
               How It Works
             </h2>
-            <div className="h-[1px] w-16 bg-primary/30"></div>
+            <div className="h-px w-16 bg-primary/30"></div>
           </div>
           <div className="flex justify-center">
              <Image src="/logo.png" alt="Decorative" width={40} height={40} className="opacity-20" />
@@ -68,9 +68,11 @@ export default function HowItWorks() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="flex flex-col items-center text-center relative"
               >
-                <div className="w-24 h-24 rounded-full bg-accent flex items-center justify-center mb-6 relative shadow-sm border-[6px] border-[#FCF9F9]">
+                <div className="w-24 h-24 rounded-full bg-accent flex items-center justify-center mb-6 relative 
+                shadow-sm ">
                   <step.icon className="text-3xl text-primary" />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm border-4 border-[#FCF9F9]">
+                  <div className="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-primary text-white flex 
+                  items-center justify-center font-bold text-sm ">
                     {step.id}
                   </div>
                 </div>

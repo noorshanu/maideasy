@@ -51,7 +51,7 @@ export default function HeroSection() {
           >
             <motion.div variants={itemVariants} className="mb-6">
               <span className="inline-block py-1.5 px-4 rounded-full bg-accent text-primary text-sm font-medium">
-                India's Trusted Domestic Help Service
+                India&apos;s Trusted Domestic Help Service
               </span>
             </motion.div>
             
@@ -73,7 +73,7 @@ export default function HeroSection() {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10">
               <div className="flex items-center gap-2 text-gray-700 font-medium">
                 <FiCheckCircle className="text-primary text-xl" />
-                <span className="text-sm">Verified &<br/>Background Checked</span>
+                <span className="text-sm">Verified &<br/>Background <br /> Checked</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700 font-medium">
                 <FiRefreshCw className="text-primary text-xl" />
@@ -91,15 +91,15 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary-light transition-colors shadow-md"
               >
-                Book a Helper <FiArrowRight className="text-lg" />
+                Book a Household Assistant <FiArrowRight className="text-lg" />
               </motion.button>
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-gray-800 border-2 border-gray-200 px-8 py-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:border-primary hover:text-primary transition-colors"
               >
-                How It Works <FiPlayCircle className="text-xl" />
-              </motion.button>
+                How Maid Eazy Works <FiPlayCircle className="text-xl" />
+              </motion.button> */}
             </motion.div>
           </motion.div>
           
