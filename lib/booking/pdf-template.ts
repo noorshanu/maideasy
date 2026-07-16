@@ -293,7 +293,7 @@ export async function buildBookingHtml(booking: BookingData, bookingId: string) 
       </div>
 
       <div class="footer">
-        MaidEazy | +91 9061 222 123 | hello@maideazy.in | Kochi, Kerala, India<br />
+        MaidEazy | +91 9778 527 419 | hello@maideazy.in | Kochi, Kerala, India<br />
         © ${new Date().getFullYear()} MaidEazy. All Rights Reserved.
       </div>
     </div>

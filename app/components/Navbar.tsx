@@ -66,11 +66,11 @@ export default function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           <a
-            href="tel:+919061222123"
+            href="tel:+919778527419"
             className="flex items-center gap-2 text-primary font-medium hover:text-primary-light transition-colors"
           >
             <FiPhone className="text-lg" />
-            <span>+91 9061 222 123</span>
+            <span>+91 9778 527 419</span>
           </a>
           <motion.a
             href="/book-now"
@@ -114,11 +114,11 @@ export default function Navbar() {
               ))}
               <div className="pt-4 flex flex-col gap-4">
                 <a
-                  href="tel:+919061222123"
+                  href="tel:+919778527419"
                   className="flex items-center gap-2 text-primary font-medium justify-center py-2 bg-accent rounded-lg"
                 >
                   <FiPhone />
-                  <span>+91 9061 222 123</span>
+                  <span>+91 9778 527 419</span>
                 </a>
                 <Link
                   href="/book-now"

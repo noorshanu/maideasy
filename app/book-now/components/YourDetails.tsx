@@ -137,7 +137,7 @@ export default function YourDetails() {
                 type="tel"
                 required
                 inputMode="numeric"
-                placeholder="e.g. 9061222123"
+                placeholder="e.g. 9778527419"
                 value={booking.mobile}
                 onChange={(e) => {
                   updateBooking({ mobile: e.target.value });

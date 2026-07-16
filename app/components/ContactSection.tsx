@@ -49,7 +49,7 @@ export default function ContactSection() {
             className="lg:col-span-2 space-y-5"
           >
             <a
-              href="tel:+919061222123"
+              href="tel:+919778527419"
               className="flex items-start gap-4 bg-[#FCF9F9] rounded-xl p-5 border border-gray-100 hover:border-primary/20 transition-colors group"
             >
               <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
@@ -59,7 +59,7 @@ export default function ContactSection() {
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
                   Call Us
                 </p>
-                <p className="font-semibold text-primary">+91 9061 222 123</p>
+                <p className="font-semibold text-primary">+91 9778 527 419</p>
               </div>
             </a>
 
@@ -91,7 +91,7 @@ export default function ContactSection() {
             </div>
 
             <a
-              href="https://wa.me/919061222123"
+              href="https://wa.me/919778527419"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-[#25D366] text-white rounded-xl py-4 font-semibold text-sm hover:bg-[#1fb855] transition-colors"
@@ -145,7 +145,7 @@ export default function ContactSection() {
                       required
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="e.g. 9061222123"
+                      placeholder="e.g. 9778527419"
                       className="w-full bg-white border border-gray-200 rounded-lg px-3 py-2.5 pl-10 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                     />
                     <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />

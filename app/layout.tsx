@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, DM_Sans } from "next/font/google";
 import "./globals.css";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -29,7 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${lora.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#FCF9F9] text-gray-800">{children}</body>
+      <body className="min-h-full flex flex-col font-sans bg-[#FCF9F9] text-gray-800">
+        {children}
+        <FloatingWhatsApp />
+      </body>
     </html>
   );
 }

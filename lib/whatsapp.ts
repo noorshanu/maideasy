@@ -40,7 +40,7 @@ async function uploadMedia(pdfBuffer: Buffer, filename: string) {
 }
 
 function normalizePhone(phone: string) {
-  // Expect E.164 without + for WhatsApp Cloud API, e.g. 919061222123
+  // Expect E.164 without + for WhatsApp Cloud API, e.g. 919778527419
   return phone.replace(/\D/g, "");
 }
 

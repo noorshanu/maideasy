@@ -208,7 +208,7 @@ export default function BookingSummary() {
         </div>
         <div>
           <p className="text-xs text-gray-500 font-medium">Need Help?</p>
-          <p className="text-sm font-bold text-gray-900 mt-0.5">Call us at +91 9061 222 123</p>
+          <p className="text-sm font-bold text-gray-900 mt-0.5">Call us at +91 9778 527 419</p>
         </div>
       </div>
     </div>
