@@ -1,34 +1,18 @@
-import { google } from "googleapis";
 import type { BookingData } from "./booking/types";
 import { formatDailyHours } from "./booking/types";
 
-function getAuth() {
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n");
-  const sheetId = process.env.GOOGLE_SHEET_ID;
-
-  if (!email || !privateKey || !sheetId) {
-    throw new Error(
-      "Missing Google Sheets env vars: GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SHEET_ID"
-    );
+export async function appendBookingToSheet(booking: BookingData, bookingId: string) {
+  const webhookUrl = process.env.NEXT_PUBLIC_GSHEET_WEBHOOK;
+  
+  if (!webhookUrl) {
+    throw new Error("NEXT_PUBLIC_GSHEET_WEBHOOK is not defined in .env");
   }
 
-  const auth = new google.auth.JWT({
-    email,
-    key: privateKey,
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-  });
-
-  return { auth, sheetId };
-}
-
-export async function appendBookingToSheet(booking: BookingData, bookingId: string) {
-  const { auth, sheetId } = getAuth();
-  const sheets = google.sheets({ version: "v4", auth });
-  const range = process.env.GOOGLE_SHEET_RANGE || "Bookings!A:Z";
-
-  const row = [
-    new Date().toISOString(),
+  // Re-create the full 21-column row format
+  const timestamp = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+  
+  const rowArray = [
+    timestamp,
     bookingId,
     booking.fullName,
     booking.mobile,
@@ -51,10 +35,22 @@ export async function appendBookingToSheet(booking: BookingData, bookingId: stri
     booking.notes,
   ];
 
-  await sheets.spreadsheets.values.append({
-    spreadsheetId: sheetId,
-    range,
-    valueInputOption: "USER_ENTERED",
-    requestBody: { values: [row] },
+  const payload = {
+    ...booking,
+    formType: "booking",
+    bookingId: bookingId,
+    rowArray: rowArray, // Send the pre-formatted array so the webhook can just drop it in
+  };
+
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
   });
+
+  if (!response.ok) {
+    throw new Error(`Webhook responded with status: ${response.status}`);
+  }
 }

@@ -10,12 +10,14 @@ import FAQSection from "./components/FAQSection";
 import ContactSection from "./components/ContactSection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
+import Hireme from "./components/Hireme";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <Navbar />
       <HeroSection />
+      <Hireme />
       <AboutUsSection />
       <ServicesSection />
       <HowItWorks />

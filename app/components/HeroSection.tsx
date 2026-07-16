@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiCheckCircle, FiRefreshCw, FiHeadphones, FiArrowRight, FiPlayCircle } from "react-icons/fi";
+import { FiCheckCircle, FiRefreshCw, FiHeadphones, FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
+import EnquiryModal from "./EnquiryModal";
 
 export default function HeroSection() {
+  const [modalOpen, setModalOpen] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -137,14 +140,18 @@ export default function HeroSection() {
                 </div>
               </div>
               
-              <button className="w-full bg-primary text-white py-3.5 rounded-lg font-semibold text-sm uppercase tracking-wider hover:bg-primary-light transition-colors shadow-md">
-                Get Started Now
+              <button
+                onClick={() => setModalOpen(true)}
+                className="w-full bg-primary text-white py-3.5 rounded-lg font-semibold text-sm uppercase tracking-wider hover:bg-primary-light transition-colors shadow-md cursor-pointer"
+              >
+                ENQUIRE NOW
               </button>
             </motion.div>
           </motion.div>
           
         </div>
       </div>
+      <EnquiryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
