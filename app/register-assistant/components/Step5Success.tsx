@@ -12,7 +12,7 @@ const Step5Success: React.FC = () => {
                     <FaCheckCircle className="text-6xl text-green-500 relative z-10" />
                 </div>
             </div>
-            <h1 className="text-4xl font-bold text-purple-900 mb-2">Registration <span className="text-green-600">Received!</span></h1>
+            <h2 className="text-4xl font-bold text-purple-900 mb-2">Registration <span className="text-green-600">Received!</span></h2>
             <p className="text-lg font-medium text-gray-800">Thank you for joining MaidEazy family.</p>
             <p className="text-gray-600 mt-2 max-w-lg mx-auto">
                 Your application has been successfully submitted. Our team will review your details and get in touch with you soon.
