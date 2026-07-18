@@ -2,7 +2,7 @@ import React from "react";
 import { FaEdit } from "react-icons/fa";
 
 interface Step4Props {
-  formData: Record<string, unknown>;
+  formData: Record<string, string | string[]>;
   nextStep: () => void;
   prevStep: () => void;
   setStep: (step: number) => void;
@@ -30,7 +30,7 @@ const Step4Review: React.FC<Step4Props> = ({ formData, nextStep, prevStep, setSt
       </div>
   );
 
-  const DataRow = ({ label, value }: { label: string, value: unknown }) => (
+  const DataRow = ({ label, value }: { label: string, value: string | string[] | undefined }) => (
       <div className="mb-2 grid grid-cols-3 gap-2">
           <span className="text-sm text-gray-500 col-span-1">{label}:</span>
           <span className="text-sm font-medium text-gray-900 col-span-2">

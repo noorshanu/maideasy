@@ -1,8 +1,8 @@
 import React from "react";
 
 interface Step1Props {
-  formData: Record<string, unknown>;
-  updateFormData: (data: Record<string, unknown>) => void;
+  formData: Record<string, string | string[]>;
+  updateFormData: (data: Record<string, string | string[]>) => void;
   nextStep: () => void;
 }
 
@@ -218,12 +218,12 @@ const Step1PersonalDetails: React.FC<Step1Props> = ({
         </label>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {["Housekeeping", "Cooking", "Babysitting", "Elder Care", "Full-time (Live-in)", "Part-time", "Other"].map((workType) => {
-            const isSelected = formData.workTypes?.includes(workType);
+            const isSelected = (formData.workTypes as string[])?.includes(workType);
             return (
               <div
                 key={workType}
                 onClick={() => {
-                  const currentWorkTypes = formData.workTypes || [];
+                  const currentWorkTypes = (formData.workTypes as string[]) || [];
                   const newWorkTypes = isSelected
                     ? currentWorkTypes.filter((w: string) => w !== workType)
                     : [...currentWorkTypes, workType];

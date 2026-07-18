@@ -1,8 +1,8 @@
 import React from "react";
 
 interface Step2Props {
-  formData: Record<string, unknown>;
-  updateFormData: (data: Record<string, unknown>) => void;
+  formData: Record<string, string | string[]>;
+  updateFormData: (data: Record<string, string | string[]>) => void;
   nextStep: () => void;
   prevStep: () => void;
 }
@@ -24,7 +24,7 @@ const Step2Experience: React.FC<Step2Props> = ({
   };
   
   const handleCheckboxChange = (name: string, value: string) => {
-      const currentValues = formData[name] || [];
+      const currentValues = (formData[name] as string[]) || [];
       const newValues = currentValues.includes(value)
         ? currentValues.filter((v: string) => v !== value)
         : [...currentValues, value];
@@ -78,7 +78,7 @@ const Step2Experience: React.FC<Step2Props> = ({
                   <label key={service} className="flex items-center space-x-3 border rounded-md p-3 bg-gray-50 border-gray-200 cursor-pointer hover:bg-purple-50 hover:border-purple-200 transition-colors">
                       <input 
                         type="checkbox"
-                        checked={(formData.services || []).includes(service)}
+                        checked={((formData.services as string[]) || []).includes(service)}
                         onChange={() => handleCheckboxChange("services", service)}
                         className="h-4 w-4 text-purple-600 rounded border-gray-300 focus:ring-purple-500 shrink-0"
                       />
@@ -100,7 +100,7 @@ const Step2Experience: React.FC<Step2Props> = ({
                     <label key={lang} className="flex items-center space-x-2">
                         <input
                         type="checkbox"
-                        checked={(formData.languages || []).includes(lang)}
+                        checked={((formData.languages as string[]) || []).includes(lang)}
                         onChange={() => handleCheckboxChange("languages", lang)}
                         className="h-4 w-4 text-purple-600 rounded border-gray-300 focus:ring-purple-500 shrink-0"
                         />
@@ -120,7 +120,7 @@ const Step2Experience: React.FC<Step2Props> = ({
                     <label key={item} className="flex items-center space-x-3 border rounded-md p-3 bg-gray-50 border-gray-200 cursor-pointer hover:bg-purple-50 hover:border-purple-200 transition-colors">
                         <input 
                             type="checkbox"
-                            checked={(formData.comfortableWith || []).includes(item)}
+                            checked={((formData.comfortableWith as string[]) || []).includes(item)}
                             onChange={() => handleCheckboxChange("comfortableWith", item)}
                             className="h-4 w-4 text-purple-600 rounded border-gray-300 focus:ring-purple-500 shrink-0"
                         />

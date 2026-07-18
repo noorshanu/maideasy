@@ -15,9 +15,9 @@ import { FaHeadset, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 const RegisterAssistantPage = () => {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<Record<string, unknown>>({});
+  const [formData, setFormData] = useState<Record<string, string | string[]>>({});
 
-  const updateFormData = (newData: Record<string, unknown>) => {
+  const updateFormData = (newData: Record<string, string | string[]>) => {
     setFormData((prev) => ({ ...prev, ...newData }));
   };
 
