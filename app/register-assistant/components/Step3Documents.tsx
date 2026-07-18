@@ -2,8 +2,8 @@ import React from "react";
 import { FaIdCard, FaRegCreditCard, FaUserCircle, FaFileAlt, FaBriefcase, FaUniversity, FaAddressCard } from "react-icons/fa";
 
 interface Step3Props {
-  formData: any;
-  updateFormData: (data: any) => void;
+  formData: Record<string, unknown>;
+  updateFormData: (data: Record<string, unknown>) => void;
   nextStep: () => void;
   prevStep: () => void;
 }

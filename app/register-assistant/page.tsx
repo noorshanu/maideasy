@@ -79,13 +79,13 @@ const RegisterAssistantPage = () => {
                 </div>
                 
                 {/* Trusted Community Badge */}
-                <div className="absolute top-[15%] right-0 bg-white p-5 rounded-xl shadow-lg z-20 w-56 lg:w-64 text-center border border-purple-50">
-                    <div className="bg-purple-50 w-12 h-12 lg:w-16 lg:h-16 rounded-full mx-auto flex items-center justify-center text-purple-700 text-xl lg:text-2xl mb-3">
+                <div className="absolute bottom-0 right-0 bg-white/40 backdrop-blur-md p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] z-20 w-56 lg:w-64 text-center border border-purple-300/50">
+                    <div className="bg-white/50 backdrop-blur-sm shadow-sm border border-purple-300/50 w-12 h-12 lg:w-16 lg:h-16 rounded-full mx-auto flex items-center justify-center text-purple-700 text-xl lg:text-2xl mb-3">
                         👥
                     </div>
                     <h4 className="font-bold text-gray-900 mb-1 lg:mb-2 text-sm lg:text-base">Be a Part of a<br/>Trusted Community</h4>
-                    <p className="text-[10px] lg:text-xs text-gray-500">5000+ household assistants trust MaidEazy to build better careers.</p>
-                    <div className="text-purple-300 mt-2 lg:mt-4">🌿</div>
+                    <p className="text-[10px] lg:text-xs text-gray-700">5000+ household assistants trust MaidEazy to build better careers.</p>
+                    <div className="text-purple-400 mt-2 lg:mt-4">🌿</div>
                 </div>
             </div>
           </div>

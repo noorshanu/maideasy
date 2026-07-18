@@ -1,8 +1,8 @@
 import React from "react";
 
 interface Step1Props {
-  formData: any;
-  updateFormData: (data: any) => void;
+  formData: Record<string, unknown>;
+  updateFormData: (data: Record<string, unknown>) => void;
   nextStep: () => void;
 }
 
