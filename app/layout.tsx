@@ -16,6 +16,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.maideazy.in"),
   title: {
     default: "MaidEazy | Bringing Trust Home",
     template: "%s | MaidEazy",
